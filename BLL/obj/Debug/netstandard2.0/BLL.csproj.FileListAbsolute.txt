@@ -1,0 +1,9 @@
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\BLL.deps.json
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\BLL.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\BLL.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.csprojAssemblyReference.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.AssemblyInfoInputs.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.AssemblyInfo.cs
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.pdb
