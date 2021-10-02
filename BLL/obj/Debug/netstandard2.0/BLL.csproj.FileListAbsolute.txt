@@ -7,3 +7,8 @@ C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.csproj.CoreCompileInputs.cache
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.dll
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\DAL.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\Entity.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\Entity.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\DAL.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.csproj.CopyComplete

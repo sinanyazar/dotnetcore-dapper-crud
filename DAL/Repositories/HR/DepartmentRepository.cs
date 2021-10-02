@@ -10,7 +10,7 @@ namespace DAL.Repositories.HR
             throw new System.NotImplementedException();
         }
 
-        public Deparment GetT(int entityId)
+        public Deparment Get(int entityId)
         {
             throw new System.NotImplementedException();
         }
@@ -20,7 +20,7 @@ namespace DAL.Repositories.HR
             throw new System.NotImplementedException();
         }
 
-        public List<Deparment> List()
+        public IEnumerable<Deparment> List()
         {
             throw new System.NotImplementedException();
         }

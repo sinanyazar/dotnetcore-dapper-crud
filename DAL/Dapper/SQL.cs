@@ -1,14 +1,15 @@
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Dapper;
 
 namespace DAL.Dapper
 {
-    public class SQL<T>
+    public class SQL<T> : IDisposable
     {
         private SqlConnection _connection;
 
-        private const string cnn = @"Data Source=(local);Initial Catalog=AdventureWorks2017;User ID=sa;Password=123";
+        private const string cnn = @"Server=DESKTOP-LC4GVGJ\SQLEXPRESS;Database=AdventureWorks2017;Trusted_Connection=true";
 
         public IEnumerable<T> Query(string query)
         {
@@ -26,6 +27,11 @@ namespace DAL.Dapper
             {
                 _connection.Execute(query);
             }
+        }
+
+        public void Dispose()
+        {
+            _connection.Dispose();
         }
     }
 }

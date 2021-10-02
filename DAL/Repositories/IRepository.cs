@@ -7,7 +7,7 @@ namespace DAL.Repositories
         void Insert(T entity);
         void Update(T entity);
         void Delete(T entity);
-        T GetT(int entityId);
-        List<T> List();
+        T Get(int entityId);
+        IEnumerable<T> List();
     }
 }

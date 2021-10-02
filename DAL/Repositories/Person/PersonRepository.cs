@@ -10,7 +10,7 @@ namespace DAL.Repositories.Person
             throw new System.NotImplementedException();
         }
 
-        public Persons GetT(int entityId)
+        public Persons Get(int entityId)
         {
             throw new System.NotImplementedException();
         }
@@ -20,7 +20,7 @@ namespace DAL.Repositories.Person
             throw new System.NotImplementedException();
         }
 
-        public List<Persons> List()
+        public IEnumerable<Persons> List()
         {
             throw new System.NotImplementedException();
         }

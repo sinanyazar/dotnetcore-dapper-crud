@@ -18,3 +18,17 @@ C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Deb
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.dll
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.pdb
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.genruntimeconfig.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Dapper.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\BLL.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\DAL.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Entity.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Entity.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\BLL.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\DAL.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.csproj.CopyComplete

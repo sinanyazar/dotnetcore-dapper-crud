@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DAL.Dapper;
 using Entity.Models.HR;
 
 namespace DAL.Repositories.HR
@@ -10,7 +11,7 @@ namespace DAL.Repositories.HR
             throw new System.NotImplementedException();
         }
 
-        public Employee GetT(int entityId)
+        public Employee Get(int entityId)
         {
             throw new System.NotImplementedException();
         }
@@ -20,9 +21,14 @@ namespace DAL.Repositories.HR
             throw new System.NotImplementedException();
         }
 
-        public List<Employee> List()
+        public IEnumerable<Employee> List()
         {
-            throw new System.NotImplementedException();
+            using(SQL<Employee> _sql = new SQL<Employee>())
+            {
+                const string query = @"Select * From HumanResources.Employee";
+
+                return _sql.Query(query);
+            }
         }
 
         public void Update(Employee entity)
