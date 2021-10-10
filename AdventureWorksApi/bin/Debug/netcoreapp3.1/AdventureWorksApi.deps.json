@@ -412,6 +412,7 @@
       "System.Security.Principal.Windows/4.7.0": {},
       "BLL/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
           "DAL": "1.0.0",
           "Entity": "1.0.0"
         },
@@ -420,6 +421,14 @@
         },
         "compile": {
           "BLL.dll": {}
+        }
+      },
+      "Core/1.0.0": {
+        "runtime": {
+          "Core.dll": {}
+        },
+        "compile": {
+          "Core.dll": {}
         }
       },
       "DAL/1.0.0": {
@@ -2221,6 +2230,11 @@
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
     },
     "BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

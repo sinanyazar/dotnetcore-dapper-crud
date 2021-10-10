@@ -11,10 +11,29 @@ namespace AdventureWorksApi.Controllers
     public class EmployeeController : ControllerBase
     {
         private EmployeeService _service = new EmployeeService(new EmployeeRepository());
+
         [HttpGet]
-        public IEnumerable<Employee> Get()
+        public IActionResult Get()
         {
-            return _service.List();
+            var result = _service.List();
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getbyid")]
+        public IActionResult Get(int id)
+        {
+            var result = _service.Get(id);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
         }
     }
 }

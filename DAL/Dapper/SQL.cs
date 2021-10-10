@@ -21,6 +21,16 @@ namespace DAL.Dapper
             }
         }
 
+        public T QueryFirst(string query, int id)
+        {
+            using(_connection = new SqlConnection(cnn))
+            {
+                var result = _connection.QueryFirst<T>(query, new { BusinessEntityID = id });
+
+                return result;
+            }
+        }
+
         public void Execute(string query)
         {
             using(_connection = new SqlConnection(cnn))

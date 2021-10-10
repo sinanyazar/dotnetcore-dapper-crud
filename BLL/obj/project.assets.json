@@ -251,6 +251,16 @@
           }
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1036,6 +1046,11 @@
         "version.txt"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "DAL/1.0.0": {
       "type": "project",
       "path": "../DAL/DAL.csproj",
@@ -1049,6 +1064,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Core >= 1.0.0",
       "DAL >= 1.0.0",
       "Entity >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
@@ -1084,6 +1100,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\Core\\Core.csproj"
+            },
             "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\DAL\\DAL.csproj": {
               "projectPath": "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\DAL\\DAL.csproj"
             },

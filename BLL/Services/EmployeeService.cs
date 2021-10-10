@@ -1,6 +1,8 @@
+using System;
+using System.Collections.Generic;
+using Core.Utilities;
 using DAL.Repositories.HR;
 using Entity.Models.HR;
-using System.Collections.Generic;
 
 namespace BLL.Services
 {
@@ -12,27 +14,42 @@ namespace BLL.Services
         {
             _service = service;
         }
-        public bool Delete(Employee entity)
+
+        public IResult Delete(Employee entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public Employee Get(int entityId)
+        public IDataResult<Employee> Get(int entityId)
+        {
+            try
+            {
+                return new SuccessDataResult<Employee>(_service.Get(entityId));
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<Employee>(ex.Message);
+            }
+        }
+
+        public IResult Insert(Employee entity)
         {
             throw new System.NotImplementedException();
         }
 
-        public bool Insert(Employee entity)
+        public IDataResult<IEnumerable<Employee>> List()
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                return new SuccessDataResult<IEnumerable<Employee>>(_service.List());
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<IEnumerable<Employee>>(ex.Message);
+            }
         }
 
-        public IEnumerable<Employee> List()
-        {
-            return _service.List();
-        }
-
-        public bool Update(Employee entity)
+        public IResult Update(Employee entity)
         {
             throw new System.NotImplementedException();
         }

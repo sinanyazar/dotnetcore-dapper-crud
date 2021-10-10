@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AGmNhjwXwXsVA48KuSRa7xJvPR5qRpvUv13BLmcAoinUGhBEzGu9iUqP+gCxoIRcKFJYYNKFy5siDGPvaexRSQ==",
+  "dgSpecHash": "EU6g+xXO0UMJjXPXdUJIEQME7o3OoDltNMQUJYlbn1yhbC4nc7SuTmAfc9XQToRblzVyuOC+ZZNEk/wECTkMMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\AdventureWorksApi\\AdventureWorksApi.csproj",
   "expectedPackageFiles": [

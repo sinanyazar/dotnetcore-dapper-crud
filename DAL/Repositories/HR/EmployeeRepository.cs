@@ -13,7 +13,13 @@ namespace DAL.Repositories.HR
 
         public Employee Get(int entityId)
         {
-            throw new System.NotImplementedException();
+            using(SQL<Employee> _sql = new SQL<Employee>())
+            {
+                const string query = @"Select * From HumanResources.Employee 
+                                    Where BusinessEntityID = @BusinessEntityID";
+
+                return _sql.QueryFirst(query, entityId);
+            }
         }
 
         public void Insert(Employee entity)

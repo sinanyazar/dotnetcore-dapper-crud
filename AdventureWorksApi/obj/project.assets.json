@@ -156,6 +156,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Core": "1.0.0",
           "DAL": "1.0.0",
           "Entity": "1.0.0"
         },
@@ -164,6 +165,16 @@
         },
         "runtime": {
           "bin/placeholder/BLL.dll": {}
+        }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
         }
       },
       "DAL/1.0.0": {
@@ -584,6 +595,11 @@
       "type": "project",
       "path": "../BLL/BLL.csproj",
       "msbuildProject": "../BLL/BLL.csproj"
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     },
     "DAL/1.0.0": {
       "type": "project",

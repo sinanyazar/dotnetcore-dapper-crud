@@ -6,8 +6,12 @@ namespace Core.Utilities
         {
         }
 
-        public ErrorDataResult(T data) : base(data,false){
+        public ErrorDataResult(T data) : base(data,false)
+        {
+        }
 
+        public ErrorDataResult(string message) : base(default, false, message)
+        {
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "904KhPC0X2Wv3H8REjTf1FB+OUh+eutAR9baG/QWmTa5EPjlr1Oc/fID4Ox5iNS3UhSpVDW4b4DrzP5GQn6j0A==",
+  "dgSpecHash": "nUdK4CmnFyjU6P/yhVWRTT8NRFlPj1/O1zSsjAOKA+U7vT5D+KwOZdYyLSjc0kIciE9vgXsOo6vtKnvScRiGHw==",
   "success": true,
   "projectFilePath": "C:\\Users\\sinan\\Documents\\GitHub\\dotnetcore-dapper-crud\\BLL\\BLL.csproj",
   "expectedPackageFiles": [

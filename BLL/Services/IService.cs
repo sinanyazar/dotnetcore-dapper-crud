@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using Core.Utilities;
 
 namespace BLL.Services
 {
     public interface IService<T>
     {
-        bool Insert(T entity);
-        bool Update(T entity);
-        bool Delete(T entity);
-        T Get(int entityId);
-        IEnumerable<T> List();
+        IResult Insert(T entity);
+        IResult Update(T entity);
+        IResult Delete(T entity);
+        IDataResult<T> Get(int entityId);
+        IDataResult<IEnumerable<T>> List();
     }
 }

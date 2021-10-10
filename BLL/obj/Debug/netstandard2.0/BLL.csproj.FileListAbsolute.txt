@@ -12,3 +12,5 @@ C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\Entity.pdb
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\DAL.pdb
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\obj\Debug\netstandard2.0\BLL.csproj.CopyComplete
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\Core.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\BLL\bin\Debug\netstandard2.0\Core.pdb

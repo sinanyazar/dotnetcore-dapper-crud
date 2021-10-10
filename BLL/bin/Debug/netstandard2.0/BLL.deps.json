@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "BLL/1.0.0": {
         "dependencies": {
+          "Core": "1.0.0",
           "DAL": "1.0.0",
           "Entity": "1.0.0",
           "NETStandard.Library": "2.0.3"
@@ -172,6 +173,11 @@
           }
         }
       },
+      "Core/1.0.0": {
+        "runtime": {
+          "Core.dll": {}
+        }
+      },
       "DAL/1.0.0": {
         "dependencies": {
           "Dapper": "2.0.90",
@@ -327,6 +333,11 @@
       "sha512": "sha512-aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
       "path": "system.text.encoding.codepages/4.7.0",
       "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DAL/1.0.0": {
       "type": "project",
