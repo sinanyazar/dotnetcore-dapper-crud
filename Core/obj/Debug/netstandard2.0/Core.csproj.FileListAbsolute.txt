@@ -1,0 +1,9 @@
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\bin\Debug\netstandard2.0\Core.deps.json
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\bin\Debug\netstandard2.0\Core.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\Core\obj\Debug\netstandard2.0\Core.pdb
