@@ -34,7 +34,15 @@ namespace BLL.Services
 
         public IResult Insert(Employee entity)
         {
-            throw new System.NotImplementedException();
+            try
+            {
+                _service.Insert(entity);
+                return new SuccessResult();
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<Employee>(ex.Message);
+            }
         }
 
         public IDataResult<IEnumerable<Employee>> List()

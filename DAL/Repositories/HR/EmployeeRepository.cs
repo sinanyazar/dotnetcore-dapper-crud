@@ -18,13 +18,52 @@ namespace DAL.Repositories.HR
                 const string query = @"Select * From HumanResources.Employee 
                                     Where BusinessEntityID = @BusinessEntityID";
 
-                return _sql.QueryFirst(query, entityId);
+                return _sql.QueryFirst(query, 
+                new 
+                {
+                    BusinessEntityID = entityId
+                });
             }
         }
 
         public void Insert(Employee entity)
         {
-            throw new System.NotImplementedException();
+            using(SQL<Employee> _sql = new SQL<Employee>())
+            {
+                const string query =  @"
+                    INSERT INTO [HumanResources].[Employee]
+                        ([BusinessEntityID],
+                        [NationalIDNumber],
+                        [LoginID],
+                        [OrganizationNode],
+                        [JobTitle],
+                        [BirthDate],
+                        [MaritalStatus],
+                        [Gender],
+                        [HireDate],
+                        [SalariedFlag],
+                        [VacationHours],
+                        [SickLeaveHours],
+                        [CurrentFlag],
+                        [ModifiedDate])
+                    VALUES
+                        (@BusinessEntityID,
+                        @NationalIDNumber,
+                        @LoginID,
+                        @OrganizationNode,
+                        @JobTitle,
+                        @BirthDate,
+                        @MaritalStatus,
+                        @Gender,
+                        @HireDate,
+                        @SalariedFlag,
+                        @VacationHours,
+                        @SickLeaveHours,
+                        @CurrentFlag,
+                        GETDATE())";
+
+                _sql.Execute(query, entity);
+            }
         }
 
         public IEnumerable<Employee> List()

@@ -35,5 +35,17 @@ namespace AdventureWorksApi.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpPost("add")]
+        public IActionResult Insert(Employee employee)
+        {
+            var result = _service.Insert(employee);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

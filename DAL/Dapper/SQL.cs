@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using Dapper;
@@ -11,7 +12,7 @@ namespace DAL.Dapper
 
         private const string cnn = @"Server=DESKTOP-LC4GVGJ\SQLEXPRESS;Database=AdventureWorks2017;Trusted_Connection=true";
 
-        public IEnumerable<T> Query(string query)
+        public IEnumerable<T> Query(string query, object param = null, int? commandTimeout = null, CommandType? commandType = null)
         {
             using(_connection = new SqlConnection(cnn))
             {
@@ -21,17 +22,17 @@ namespace DAL.Dapper
             }
         }
 
-        public T QueryFirst(string query, int id)
+        public T QueryFirst(string query, object param = null, int? commandTimeout = null, CommandType? commandType = null)
         {
             using(_connection = new SqlConnection(cnn))
             {
-                var result = _connection.QueryFirst<T>(query, new { BusinessEntityID = id });
+                var result = _connection.QueryFirst<T>(query, param, commandTimeout: commandTimeout, commandType: commandType);
 
                 return result;
             }
         }
 
-        public void Execute(string query)
+        public void Execute(string query, object param = null)
         {
             using(_connection = new SqlConnection(cnn))
             {
