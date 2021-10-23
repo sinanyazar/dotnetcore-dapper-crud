@@ -7,7 +7,7 @@ namespace BLL.Services
     {
         IResult Insert(T entity);
         IResult Update(T entity);
-        IResult Delete(T entity);
+        IResult Delete(int entityId);
         IDataResult<T> Get(int entityId);
         IDataResult<IEnumerable<T>> List();
     }

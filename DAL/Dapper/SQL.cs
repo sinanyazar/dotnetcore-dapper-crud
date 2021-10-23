@@ -36,7 +36,17 @@ namespace DAL.Dapper
         {
             using(_connection = new SqlConnection(cnn))
             {
-                _connection.Execute(query);
+                _connection.Execute(query, param);
+            }
+        }
+
+        public T ExecuteScalar(string query, object param = null)
+        {
+            using(_connection = new SqlConnection(cnn))
+            {
+                var result = _connection.ExecuteScalar<T>(query);
+
+                return result;
             }
         }
 

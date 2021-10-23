@@ -6,9 +6,18 @@ namespace DAL.Repositories.HR
 {
     public class EmployeeRepository : IRepository<Employee>
     {
-        public void Delete(Employee entity)
+        public void Delete(int entityId)
         {
-            throw new System.NotImplementedException();
+            using(SQL<Employee> _sql = new SQL<Employee>())
+            {
+                const string query = @"Delete From HumanResources.Employee 
+                                    Where BusinessEntityID = @BusinessEntityID";
+                _sql.Execute(query, 
+                new 
+                {
+                    BusinessEntityID = entityId
+                });
+            }
         }
 
         public Employee Get(int entityId)
@@ -35,7 +44,6 @@ namespace DAL.Repositories.HR
                         ([BusinessEntityID],
                         [NationalIDNumber],
                         [LoginID],
-                        [OrganizationNode],
                         [JobTitle],
                         [BirthDate],
                         [MaritalStatus],
@@ -50,7 +58,6 @@ namespace DAL.Repositories.HR
                         (@BusinessEntityID,
                         @NationalIDNumber,
                         @LoginID,
-                        @OrganizationNode,
                         @JobTitle,
                         @BirthDate,
                         @MaritalStatus,
@@ -78,7 +85,34 @@ namespace DAL.Repositories.HR
 
         public void Update(Employee entity)
         {
-            throw new System.NotImplementedException();
+            using(SQL<Employee> _sql = new SQL<Employee>())
+            {
+                const string query =  @"
+                    UPDATE [HumanResources].[Employee]
+                    SET [JobTitle] = @JobTitle
+                        ,[BirthDate] = @BirthDate
+                        ,[MaritalStatus] = @MaritalStatus
+                        ,[Gender] = @Gender
+                        ,[HireDate] = @HireDate
+                        ,[SalariedFlag] = @SalariedFlag
+                        ,[VacationHours] = @VacationHours
+                        ,[SickLeaveHours] = @SickLeaveHours
+                        ,[CurrentFlag] = @CurrentFlag
+                        ,[ModifiedDate] = GETDATE()
+                    WHERE BusinessEntityID=@BusinessEntityID";
+
+                _sql.Execute(query, entity);
+            }
+        }
+
+        public int GetLastId()
+        {
+            using(SQL<int> _sql = new SQL<int>())
+            {
+                const string query = @"Select BusinessEntityID From HumanResources.Employee Order By BusinessEntityID Desc";
+
+                return _sql.ExecuteScalar(query);
+            }
         }
     }
 }

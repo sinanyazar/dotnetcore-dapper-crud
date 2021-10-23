@@ -47,5 +47,29 @@ namespace AdventureWorksApi.Controllers
             }
             return BadRequest(result);
         }
+
+        [HttpPost("update")]
+        public IActionResult Update(Employee employee)
+        {
+            var result = _service.Update(employee);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpPost("delete")]
+        public IActionResult Delete(int employeeId)
+        {
+            var result = _service.Delete(employeeId);
+
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
     }
 }

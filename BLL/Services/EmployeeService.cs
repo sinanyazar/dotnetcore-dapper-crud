@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BLL.Constant;
 using Core.Utilities;
 using DAL.Repositories.HR;
 using Entity.Models.HR;
@@ -15,16 +16,29 @@ namespace BLL.Services
             _service = service;
         }
 
-        public IResult Delete(Employee entity)
+        public IResult Delete(int entityId)
         {
-            throw new System.NotImplementedException();
+            if (entityId > 0)
+            {
+                try
+                {
+                    _service.Delete(entityId);
+                    return new SuccessResult(Messages.EmployeeDeleted);
+                }
+                catch (Exception ex)
+                {
+                    return new ErrorDataResult<Employee>(ex.Message);
+                }
+            }
+            else
+                return new ErrorResult(Messages.BusinessEntityIDNotFound);
         }
 
         public IDataResult<Employee> Get(int entityId)
         {
             try
             {
-                return new SuccessDataResult<Employee>(_service.Get(entityId));
+                return new SuccessDataResult<Employee>(_service.Get(entityId), Messages.EmployeeListed);
             }
             catch (Exception ex)
             {
@@ -34,22 +48,33 @@ namespace BLL.Services
 
         public IResult Insert(Employee entity)
         {
-            try
+            if(entity == null)
+                return null;
+            
+            int id = _service.GetLastId();
+            if (id > 0)
             {
-                _service.Insert(entity);
-                return new SuccessResult();
+                entity.BusinessEntityID = id + 1;
+
+                try
+                {
+                    _service.Insert(entity);
+                    return new SuccessResult(Messages.EmployeeAdded);
+                }
+                catch (Exception ex)
+                {
+                    return new ErrorDataResult<Employee>(ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                return new ErrorDataResult<Employee>(ex.Message);
-            }
+            else
+                return new ErrorResult(Messages.LastIdDidntGet);
         }
 
         public IDataResult<IEnumerable<Employee>> List()
         {
             try
             {
-                return new SuccessDataResult<IEnumerable<Employee>>(_service.List());
+                return new SuccessDataResult<IEnumerable<Employee>>(_service.List(),Messages.EmployeesListed);
             }
             catch (Exception ex)
             {
@@ -59,7 +84,18 @@ namespace BLL.Services
 
         public IResult Update(Employee entity)
         {
-            throw new System.NotImplementedException();
+            if (entity == null)
+                return null;
+            
+            try
+            {
+                _service.Update(entity);
+                return new SuccessResult(Messages.EmployeeUpdated);
+            }
+            catch (Exception ex)
+            {
+                return new ErrorDataResult<Employee>(ex.Message);
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ namespace DAL.Repositories.HR
 {
     public class DepartmentRepository : IRepository<Deparment>
     {
-        public void Delete(Deparment entity)
+        public void Delete(int entityId)
         {
             throw new System.NotImplementedException();
         }

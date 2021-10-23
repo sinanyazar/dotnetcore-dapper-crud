@@ -5,7 +5,7 @@ namespace DAL.Repositories.Person
 {
     public class AddressRepository : IRepository<Address>
     {
-        public void Delete(Address entity)
+        public void Delete(int entityId)
         {
             throw new System.NotImplementedException();
         }
