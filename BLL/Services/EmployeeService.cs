@@ -9,11 +9,11 @@ namespace BLL.Services
 {
     public class EmployeeService : IService<Employee>
     {
-        private EmployeeRepository _service;
+        private EmployeeRepository _repository;
 
-        public EmployeeService(EmployeeRepository service)
+        public EmployeeService(EmployeeRepository repository)
         {
-            _service = service;
+            _repository = repository;
         }
 
         public IResult Delete(int entityId)
@@ -22,7 +22,7 @@ namespace BLL.Services
             {
                 try
                 {
-                    _service.Delete(entityId);
+                    _repository.Delete(entityId);
                     return new SuccessResult(Messages.EmployeeDeleted);
                 }
                 catch (Exception ex)
@@ -38,7 +38,12 @@ namespace BLL.Services
         {
             try
             {
-                return new SuccessDataResult<Employee>(_service.Get(entityId), Messages.EmployeeListed);
+                var result = _repository.Get(entityId);
+                
+                if(result != null)
+                    return new SuccessDataResult<Employee>(result, Messages.EmployeeListed);
+                else
+                    return new ErrorDataResult<Employee>(Messages.EmployeeNotFound);
             }
             catch (Exception ex)
             {
@@ -51,14 +56,14 @@ namespace BLL.Services
             if(entity == null)
                 return null;
             
-            int id = _service.GetLastId();
+            int id = _repository.GetLastId();
             if (id > 0)
             {
                 entity.BusinessEntityID = id + 1;
 
                 try
                 {
-                    _service.Insert(entity);
+                    _repository.Insert(entity);
                     return new SuccessResult(Messages.EmployeeAdded);
                 }
                 catch (Exception ex)
@@ -74,7 +79,12 @@ namespace BLL.Services
         {
             try
             {
-                return new SuccessDataResult<IEnumerable<Employee>>(_service.List(),Messages.EmployeesListed);
+                var result = _repository.List();
+
+                if (result != null)
+                    return new SuccessDataResult<IEnumerable<Employee>>(result,Messages.EmployeesListed);
+                else
+                    return new ErrorDataResult<IEnumerable<Employee>>(Messages.EmployeeNotFound);
             }
             catch (Exception ex)
             {
@@ -86,15 +96,17 @@ namespace BLL.Services
         {
             if (entity == null)
                 return null;
-            
-            try
+            else
             {
-                _service.Update(entity);
-                return new SuccessResult(Messages.EmployeeUpdated);
-            }
-            catch (Exception ex)
-            {
-                return new ErrorDataResult<Employee>(ex.Message);
+                try
+                {
+                    _repository.Update(entity);
+                    return new SuccessResult(Messages.EmployeeUpdated);
+                }
+                catch (Exception ex)
+                {
+                    return new ErrorDataResult<Employee>(ex.Message);
+                }
             }
         }
     }

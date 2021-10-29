@@ -27,7 +27,7 @@ namespace DAL.Repositories.HR
                 const string query = @"Select * From HumanResources.Employee 
                                     Where BusinessEntityID = @BusinessEntityID";
 
-                return _sql.QueryFirst(query, 
+                return _sql.QueryFirstOrDefault(query, 
                 new 
                 {
                     BusinessEntityID = entityId

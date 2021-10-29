@@ -22,11 +22,11 @@ namespace DAL.Dapper
             }
         }
 
-        public T QueryFirst(string query, object param = null, int? commandTimeout = null, CommandType? commandType = null)
+        public T QueryFirstOrDefault(string query, object param = null, int? commandTimeout = null, CommandType? commandType = null)
         {
             using(_connection = new SqlConnection(cnn))
             {
-                var result = _connection.QueryFirst<T>(query, param, commandTimeout: commandTimeout, commandType: commandType);
+                var result = _connection.QueryFirstOrDefault<T>(query, param, commandTimeout: commandTimeout, commandType: commandType);
 
                 return result;
             }

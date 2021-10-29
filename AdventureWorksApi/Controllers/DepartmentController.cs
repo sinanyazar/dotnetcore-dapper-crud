@@ -1,15 +1,15 @@
 using BLL.Services;
+using DAL.Repositories.HR;
 using Entity.Models.HR;
 using Microsoft.AspNetCore.Mvc;
-using DAL.Repositories.HR;
 
 namespace AdventureWorksApi.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class EmployeeController : ControllerBase
+    public class DepartmentController : ControllerBase
     {
-        private EmployeeService _service = new EmployeeService(new EmployeeRepository());
+        private DepartmentService _service = new DepartmentService(new DepartmentRepository());
 
         [HttpGet]
         public IActionResult Get()
@@ -36,9 +36,9 @@ namespace AdventureWorksApi.Controllers
         }
 
         [HttpPost("add")]
-        public IActionResult Insert(Employee employee)
+        public IActionResult Insert(Department department)
         {
-            var result = _service.Insert(employee);
+            var result = _service.Insert(department);
 
             if (result.Success)
             {
@@ -48,9 +48,9 @@ namespace AdventureWorksApi.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Employee employee)
+        public IActionResult Update(Department department)
         {
-            var result = _service.Update(employee);
+            var result = _service.Update(department);
 
             if (result.Success)
             {
@@ -60,9 +60,9 @@ namespace AdventureWorksApi.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(int employeeId)
+        public IActionResult Delete(int departmentId)
         {
-            var result = _service.Delete(employeeId);
+            var result = _service.Delete(departmentId);
 
             if (result.Success)
             {
