@@ -34,3 +34,8 @@ C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Deb
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.csproj.CopyComplete
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Core.dll
 C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\sinan\Documents\GitHub\dotnetcore-dapper-crud\AdventureWorksApi\obj\Debug\netcoreapp3.1\AdventureWorksApi.MvcApplicationPartsAssemblyInfo.cs
